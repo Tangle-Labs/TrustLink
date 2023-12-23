@@ -1,8 +1,16 @@
 import http from "http";
 import { Server } from "socket.io";
 import { PORT } from "./config/env.config";
+import express from "express";
 
-const server = http.createServer();
+const app = express();
+app.use(express.json());
+
+app.route("*").get((req, res) => {
+    res.send("<h1>Redirecting...</h1>");
+});
+
+const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
 
 io.on("connection", (socket) => {
