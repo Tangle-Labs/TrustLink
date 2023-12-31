@@ -41,7 +41,7 @@ io.on("connection", (socket) => {
     });
 });
 
-app.use("/", express.static(path.join(__dirname, "../../client/build")));
+app.use("*", express.static(path.join(__dirname, "../../client/build")));
 
 server.listen(PORT, async () => {
     identityService.build();
