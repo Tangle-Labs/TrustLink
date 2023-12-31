@@ -8,9 +8,11 @@ import {
 import { DidWebAccount, DidWebAdapter } from "@tanglelabs/web-identity-adapter";
 import { fileURLToPath } from "url";
 import path from "path";
-import { readFile, writeFile } from "fs/promises";
+import { promises } from "fs";
 import { IDENTITY_PATH, IDENTITY_SECRET } from "../config/env.config";
 import { nanoid } from "nanoid";
+
+const { readFile, writeFile } = promises;
 
 const constructFileStore = ({
     path,
