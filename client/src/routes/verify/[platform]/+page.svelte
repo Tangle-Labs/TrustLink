@@ -2,7 +2,6 @@
     import { page } from "$app/stores";
     import { api } from "$lib/api";
     import Qr from "$lib/components/Qr.svelte";
-    import { parseQueryStringToJson } from "@tanglelabs/oid4vc";
     import { onMount } from "svelte";
     import { Circle } from "svelte-loading-spinners";
 
@@ -10,7 +9,8 @@
     let error: string;
 
     async function sendCode(platform: "X" | "Google" | "Linkedin") {
-        const { code } = parseQueryStringToJson(window.location.search);
+        const qs = new URL(window.location.href).searchParams;
+        const code = qs.get("code");
         if (!code) return;
         const { data } = await api
             .post("/verify", {

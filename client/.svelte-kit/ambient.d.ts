@@ -44,7 +44,6 @@ declare module '$env/static/private' {
 	export const GOOGLE_CLIENT_SECRET: string;
 	export const NVM_INC: string;
 	export const MANPATH: string;
-	export const npm_package_dependencies_twitter_api_sdk: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
@@ -95,12 +94,10 @@ declare module '$env/static/private' {
 	export const JAVA_HOME: string;
 	export const npm_package_scripts_preview: string;
 	export const npm_lifecycle_event: string;
-	export const npm_package_dependencies_vite_plugin_node_polyfills: string;
 	export const LANG: string;
 	export const npm_package_devDependencies__sveltejs_vite_plugin_svelte: string;
 	export const npm_package_name: string;
 	export const ITERM_PROFILE: string;
-	export const npm_package_dependencies__tanglelabs_oid4vc: string;
 	export const npm_package_scripts_build: string;
 	export const npm_config_version_commit_hooks: string;
 	export const XPC_FLAGS: string;
@@ -202,7 +199,6 @@ declare module '$env/dynamic/private' {
 		GOOGLE_CLIENT_SECRET: string;
 		NVM_INC: string;
 		MANPATH: string;
-		npm_package_dependencies_twitter_api_sdk: string;
 		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
@@ -253,12 +249,10 @@ declare module '$env/dynamic/private' {
 		JAVA_HOME: string;
 		npm_package_scripts_preview: string;
 		npm_lifecycle_event: string;
-		npm_package_dependencies_vite_plugin_node_polyfills: string;
 		LANG: string;
 		npm_package_devDependencies__sveltejs_vite_plugin_svelte: string;
 		npm_package_name: string;
 		ITERM_PROFILE: string;
-		npm_package_dependencies__tanglelabs_oid4vc: string;
 		npm_package_scripts_build: string;
 		npm_config_version_commit_hooks: string;
 		XPC_FLAGS: string;
