@@ -7,9 +7,11 @@ import {
     ISSUER_KID,
 } from "./env.config";
 import path from "path";
-import { readFile, writeFile } from "fs/promises";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import { promises } from "fs";
+
+const { readFile, writeFile } = promises;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
