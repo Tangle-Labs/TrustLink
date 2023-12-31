@@ -8,7 +8,13 @@ import { identityService } from "./services/identity.service";
 import { ExpressErrorHandler } from "./middleware/error-handler/error-handler";
 import router from "./router";
 import { corsConfig } from "./middleware/cors/cors";
+import path from "path";
 import cors from "cors";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 app.use(cookieParser());
@@ -34,6 +40,8 @@ io.on("connection", (socket) => {
         socket.to(channel).emit("credential", token);
     });
 });
+
+app.use(express.static(path.join(__dirname, "../../client/build")));
 
 server.listen(PORT, async () => {
     identityService.build();
