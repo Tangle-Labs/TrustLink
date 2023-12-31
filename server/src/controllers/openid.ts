@@ -24,23 +24,7 @@ export const sendMetadata = expressAsyncHandler(
 
 export const sendDidJson = expressAsyncHandler(
     async (req: Request, res: Response) => {
-        const did = {
-            "@context": ["https://www.w3.org/ns/did/v1"],
-            id: "did:web:trustlink.tanglelabs.io",
-            verificationMethod: [
-                {
-                    id: "did:web:trustlink.tanglelabs.io#key-0",
-                    type: "Ed25519VerificationKey2018",
-                    controller: "did:web:trustlink.tanglelabs.io",
-                    publicKeyBase58:
-                        "Gutj2n5iFua3NskntBPs3sJUHu5sdb4Nk82nn5ew3BMs",
-                },
-            ],
-            authentication: ["did:web:trustlink.tanglelabs.io#key-0"],
-            assertionMethod: ["did:web:trustlink.tanglelabs.io#key-0"],
-            keyAgreement: ["did:web:trustlink.tanglelabs.io#key-0"],
-        };
-
+        const did = await identityService.getDidDocument();
         res.json(did);
     }
 );

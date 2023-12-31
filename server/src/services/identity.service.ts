@@ -74,6 +74,10 @@ export class IdentityService {
         }
     }
 
+    async getDidDocument() {
+        return this.did.getDocument();
+    }
+
     async createCredential(props: {
         body: Record<string, any>;
         recipientDid: string;
