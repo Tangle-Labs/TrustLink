@@ -25,7 +25,10 @@ app.use("/", router);
 app.use(ExpressErrorHandler);
 
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+const io = new Server(server, {
+    cors: { origin: "*" },
+    path: "/api/websocket",
+});
 
 io.on("connection", (socket) => {
     console.log("connected");
@@ -40,8 +43,6 @@ io.on("connection", (socket) => {
         socket.to(channel).emit("credential", token);
     });
 });
-
-app.use("*", express.static(path.join(__dirname, "../../client/build")));
 
 server.listen(PORT, async () => {
     identityService.build();
