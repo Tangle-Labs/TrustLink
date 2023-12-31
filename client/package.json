@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-node": "^2.0.2",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@tanglelabs/oid4vc": "^0.1.10",
 		"@types/qrcode": "^1.5.5",
