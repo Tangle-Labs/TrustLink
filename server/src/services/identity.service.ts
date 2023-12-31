@@ -83,7 +83,7 @@ export class IdentityService {
         const cred = await this.did.credentials.create({
             body,
             recipientDid,
-            id: `https://trustlink.tangleba.io/verify/${nanoid()}`,
+            id: `https://trustlink.tanglelabs.io/verify/${nanoid()}`,
             keyIndex: 0,
             type: [type],
         });

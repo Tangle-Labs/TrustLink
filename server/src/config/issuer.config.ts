@@ -5,6 +5,7 @@ import {
     PRIVATE_KEY_HEX,
     ISSUER_DID,
     ISSUER_KID,
+    PUBLIC_URI,
 } from "./env.config";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -38,7 +39,7 @@ const rpKeys = {
 
 export const trustlinkIssuer = new VcIssuer({
     clientName: "TrustLink",
-    logoUri: new URL("/imgs/tanglelabs.svg", PUBLIC_BASE_URI).toString(),
+    logoUri: new URL("/imgs/tanglelabs.svg", PUBLIC_URI).toString(),
     credentialEndpoint: new URL("/api/credential", PUBLIC_BASE_URI).toString(),
     tokenEndpoint: new URL("/api/token", PUBLIC_BASE_URI).toString(),
     batchCredentialEndpoint: new URL(

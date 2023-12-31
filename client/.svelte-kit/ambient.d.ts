@@ -37,6 +37,11 @@ declare module '$env/static/private' {
 	export const PRIVATE_KEY_HEX: string;
 	export const ISSUER_DID: string;
 	export const ISSUER_KID: string;
+	export const TWITTER_CLIENT_ID: string;
+	export const LINKEDIN_CLIENT_ID: string;
+	export const LINKEDIN_CLIENT_SECRET: string;
+	export const GOOGLE_CLIENT_ID: string;
+	export const GOOGLE_CLIENT_SECRET: string;
 	export const NVM_INC: string;
 	export const MANPATH: string;
 	export const npm_package_dependencies_twitter_api_sdk: string;
@@ -70,6 +75,7 @@ declare module '$env/static/private' {
 	export const NVM_DIR: string;
 	export const npm_package_description: string;
 	export const npm_package_license: string;
+	export const npm_package_dependencies_svelte_loading_spinners: string;
 	export const npm_package_scripts_check_watch: string;
 	export const COMMAND_MODE: string;
 	export const SSH_AUTH_SOCK: string;
@@ -164,7 +170,6 @@ declare module '$env/static/private' {
  * ```
  */
 declare module '$env/static/public' {
-	export const PUBLIC_TWITTER_CLIENT_ID: string;
 	export const PUBLIC_URI: string;
 	export const PUBLIC_BASE_URI: string;
 }
@@ -196,6 +201,11 @@ declare module '$env/dynamic/private' {
 		PRIVATE_KEY_HEX: string;
 		ISSUER_DID: string;
 		ISSUER_KID: string;
+		TWITTER_CLIENT_ID: string;
+		LINKEDIN_CLIENT_ID: string;
+		LINKEDIN_CLIENT_SECRET: string;
+		GOOGLE_CLIENT_ID: string;
+		GOOGLE_CLIENT_SECRET: string;
 		NVM_INC: string;
 		MANPATH: string;
 		npm_package_dependencies_twitter_api_sdk: string;
@@ -229,6 +239,7 @@ declare module '$env/dynamic/private' {
 		NVM_DIR: string;
 		npm_package_description: string;
 		npm_package_license: string;
+		npm_package_dependencies_svelte_loading_spinners: string;
 		npm_package_scripts_check_watch: string;
 		COMMAND_MODE: string;
 		SSH_AUTH_SOCK: string;
@@ -330,7 +341,6 @@ declare module '$env/dynamic/private' {
  */
 declare module '$env/dynamic/public' {
 	export const env: {
-		PUBLIC_TWITTER_CLIENT_ID: string;
 		PUBLIC_URI: string;
 		PUBLIC_BASE_URI: string;
 		[key: `PUBLIC_${string}`]: string | undefined;

@@ -16,6 +16,7 @@ import { platform } from "os";
 
 export const sendMetadata = expressAsyncHandler(
     async (req: Request, res: Response) => {
+        console.log("metadata");
         const metadata = trustlinkIssuer.getIssuerMetadata();
         res.json(metadata);
     }
@@ -67,6 +68,8 @@ export const verifyTokenAndCreateOffer = expressAsyncHandler(
             },
             { offerId: id }
         );
+        console.log(username);
+        if (!username) throw new Error("500::Unable to authorize user");
         const credOffer = await CredOfferService.create({
             id,
             offer: offer.offer,
@@ -87,6 +90,7 @@ export const generateOauthUrl = expressAsyncHandler(
 
 export const tokenEndpoint = expressAsyncHandler(
     async (req: Request, res: Response) => {
+        console.log("poggers?");
         const response = await trustlinkIssuer.createTokenResponse(req.body);
         res.json(response);
     }

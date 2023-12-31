@@ -27,6 +27,7 @@
 		"axios": "^1.6.3",
 		"nanoid": "^5.0.4",
 		"qrcode": "^1.5.3",
+		"svelte-loading-spinners": "^0.3.4",
 		"twitter-api-sdk": "^1.2.1",
 		"vite-plugin-node-polyfills": "^0.19.0"
 	}
